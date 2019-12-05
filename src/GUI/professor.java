@@ -2,8 +2,8 @@
 package GUI;
 import javax.swing.*;
 import java.awt.*;
-
-public class professor extends JFrame {
+import java.awt.event.*;
+public class professor extends JFrame implements ActionListener {
     JMenu students ;
     JMenu courses ;
     JMenu TAs;
@@ -11,7 +11,11 @@ public class professor extends JFrame {
    
     public professor(){ 
        
-      this.setTitle("professor");
+     
+   }
+     public void view_sec(){
+         
+         this.setTitle("professor");
          this.setSize(800,500);  
          this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setLocation(100,100);
@@ -30,11 +34,15 @@ public class professor extends JFrame {
          
          
          
-         this.setVisible(true);
-   }
-     public void view_sec(){
-         
-        
+         this.setVisible(true); 
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent ae) {
+       if(ae.getSource()==students){
+           this.dispose();
+         new PT().show_selection();
+       }
     }
 }
 
