@@ -5,13 +5,12 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import database.connection;
-import GUI.professor;
 public class homescreen  extends JFrame implements ActionListener {
     
     JLabel Username , password;
     JTextField username;
     JPasswordField pass ;
-    JButton signin ;
+    JButton signin ,lecture;
      public homescreen(){
           // this data belong to the first screen properites
           
@@ -25,6 +24,7 @@ public class homescreen  extends JFrame implements ActionListener {
         Username= new JLabel("Username");
         password= new JLabel("password");
         signin = new JButton("Signin");
+        lecture = new JButton("Lecture");
         username = new JTextField();
         pass= new JPasswordField();
         
@@ -34,7 +34,9 @@ public class homescreen  extends JFrame implements ActionListener {
         username.setBounds(400,120,200,30);
         pass.setBounds(400,200,200,30);
         signin.setBounds(380, 300, 90, 30);
+        lecture.setBounds(550, 300, 120, 30);
         signin.addActionListener(this);
+        lecture.addActionListener(this);
         
         // we use that to show buttons in frame
        this.add(Username); // refer to label name
@@ -42,6 +44,7 @@ public class homescreen  extends JFrame implements ActionListener {
        this.add(username); // refer to text field
        this.add(pass); // belong to text field
        this.add(signin);
+       this.add(lecture);
        this.setVisible(true);
              
     
@@ -52,20 +55,22 @@ public class homescreen  extends JFrame implements ActionListener {
         if (ae.getSource()== signin){
          int i=  database.connection.check_user(username.getText(),pass.getText());
          
-         if (i == 1 )
+         if (i == 1 ){
              this.dispose();
-         if(i== 2)
-             System.out.println("password is not correct ..! please try again");
+        new professor().view_professor();
+         }
+         else if(i== 2)
+             JOptionPane.showMessageDialog(null, "please check your password" , "password error",JOptionPane.WARNING_MESSAGE);
+            // System.out.println("password is not correct ..! please try again");
          if (i==0)
-             System.out.println("user not found");
-        String cpass =  pass.getText();
-      if (i !=0 && i !=2)
-      {  this.dispose();
-         new professor().view_sec();
-      }
+             JOptionPane.showMessageDialog(null, "user not found" , "error",JOptionPane.WARNING_MESSAGE);
+             //System.out.println("user not found");
+       
+    
         
         }
-       
+       if (ae.getSource() == lecture)
+           new lectures().view_lectures();
     }
       
     

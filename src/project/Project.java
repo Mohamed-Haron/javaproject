@@ -4,8 +4,7 @@
 package project;
 
 import java.sql.*;
-import GUI.professor ;
-import GUI.PT;
+
 public class Project {
 
    
