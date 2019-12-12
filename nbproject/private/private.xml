@@ -5,13 +5,13 @@
         <group>
             <file>file:/C:/Users/EGYPT_LAPTOP/Documents/NetBeansProjects/project/src/project/homescreen.java</file>
             <file>file:/C:/Users/EGYPT_LAPTOP/Documents/NetBeansProjects/project/src/project/professor.java</file>
-            <file>file:/C:/Users/EGYPT_LAPTOP/Documents/NetBeansProjects/project/src/project/addcourse.java</file>
+            <file>file:/C:/Users/EGYPT_LAPTOP/Documents/NetBeansProjects/project/src/database/lecture_database.java</file>
+            <file>file:/C:/Users/EGYPT_LAPTOP/Documents/NetBeansProjects/project/src/project/courses.java</file>
+            <file>file:/C:/Users/EGYPT_LAPTOP/Documents/NetBeansProjects/project/src/project/lectureFrame.java</file>
             <file>file:/C:/Users/EGYPT_LAPTOP/Documents/NetBeansProjects/project/src/project/Project.java</file>
             <file>file:/C:/Users/EGYPT_LAPTOP/Documents/NetBeansProjects/project/src/project/add.java</file>
-            <file>file:/C:/Users/EGYPT_LAPTOP/Documents/NetBeansProjects/project/src/database/courses_database.java</file>
             <file>file:/C:/Users/EGYPT_LAPTOP/Documents/NetBeansProjects/project/src/database/connection.java</file>
             <file>file:/C:/Users/EGYPT_LAPTOP/Documents/NetBeansProjects/project/src/database/student_database.java</file>
-            <file>file:/C:/Users/EGYPT_LAPTOP/Documents/NetBeansProjects/project/src/project/lectures.java</file>
         </group>
     </open-files>
 </project-private>

@@ -10,7 +10,7 @@ public class homescreen  extends JFrame implements ActionListener {
     JLabel Username , password;
     JTextField username;
     JPasswordField pass ;
-    JButton signin ,lecture;
+    JButton signin ,lecture ,courses;
      public homescreen(){
           // this data belong to the first screen properites
           
@@ -25,6 +25,7 @@ public class homescreen  extends JFrame implements ActionListener {
         password= new JLabel("password");
         signin = new JButton("Signin");
         lecture = new JButton("Lecture");
+        courses = new JButton("courses");
         username = new JTextField();
         pass= new JPasswordField();
         
@@ -35,16 +36,17 @@ public class homescreen  extends JFrame implements ActionListener {
         pass.setBounds(400,200,200,30);
         signin.setBounds(380, 300, 90, 30);
         lecture.setBounds(550, 300, 120, 30);
+        courses.setBounds(100, 300, 120, 30);
         signin.addActionListener(this);
         lecture.addActionListener(this);
-        
+        courses.addActionListener(this);
         // we use that to show buttons in frame
        this.add(Username); // refer to label name
        this.add(password); // refer to label name
        this.add(username); // refer to text field
        this.add(pass); // belong to text field
        this.add(signin);
-       this.add(lecture);
+       this.add(lecture); this.add(courses);
        this.setVisible(true);
              
     
@@ -69,8 +71,12 @@ public class homescreen  extends JFrame implements ActionListener {
     
         
         }
-       if (ae.getSource() == lecture)
-           new lectures().view_lectures();
+       if (ae.getSource() == lecture){
+           new lectureFrame().show_lectureFrame();}
+       
+       if (ae.getSource() == courses){
+           new courses().show_courses();
+       }
     }
       
     

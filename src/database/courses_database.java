@@ -41,7 +41,7 @@ public class courses_database {
             PreparedStatement p = con.prepareStatement("select * from courses");
             ResultSet r = p.executeQuery();
             while (r.next()){
-            list.add(new courses(r.getString("CourseName"),r.getInt("CourseCode")));
+            list.add(new courses(r.getString("CoursNname"),r.getInt("CourseCode")));
             }
            r.close();
            
